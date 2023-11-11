@@ -4,7 +4,7 @@ Tests for Chrome client.
 
 import unittest
 
-from clients import ChromeDriver
+from clients import ChromeClient
 from crawlers import CbxCrawler
 
 
@@ -12,7 +12,7 @@ class ScrapingTests(unittest.TestCase):
     """Tests for Chrome driver."""
 
     def setUp(self):
-        self.driver = ChromeDriver()
+        self.driver = ChromeClient()
 
     def test_chrome_driver_works(self):
         """Test chrome driver access the page and get the response."""

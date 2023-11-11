@@ -6,7 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
 
-class ChromeDriver(webdriver.Chrome):
+class ChromeClient(webdriver.Chrome):
     """Chrome driver with options that can be connected to a certain url."""
 
     def __init__(self, chrome_drv: str = 'D:\\DEV\\chromedriver.exe') -> None:

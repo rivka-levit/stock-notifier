@@ -3,7 +3,7 @@ Crawlers to scrape data from sites.
 """
 
 from selenium.webdriver.common.by import By
-from clients import ChromeDriver
+from clients import ChromeClient
 import time
 
 
@@ -11,15 +11,15 @@ class CbxCrawler:
     """Receive data from Zagreb Stock Exchange."""
 
     def __init__(self):
-        self.driver = ChromeDriver()
+        self.client = ChromeClient()
         self.url = 'https://zse.hr/en/indeks-366/365?isin=HRZB00ICBEX6'
 
     def get_trend(self):
         """Scrape trend percentage."""
 
-        self.driver.get(self.url)
+        self.client.get(self.url)
         time.sleep(2)
-        trend = self.driver.find_element(
+        trend = self.client.find_element(
             By.XPATH,
             '//span[contains(@class, "stock-trend")]'
         ).text

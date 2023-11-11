@@ -36,8 +36,3 @@ class EmailTrendNotification:
             server.starttls(context=context)
             server.login(self.sender, self.password)
             server.sendmail(self.sender, self.receiver, msg.as_string())
-
-
-if __name__ == '__main__':
-    mail = EmailTrendNotification()
-    mail.send(-0.15)
