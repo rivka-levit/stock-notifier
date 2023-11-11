@@ -18,11 +18,12 @@ class CbxWatcherTests(TestCase):
     def test_watcher_check_trend(self, mock_trend, patched_sleep):
         """Test the watcher scrapes the trend and notify when it matches."""
 
-        mock_trend.return_value = -0.28
         patched_sleep.return_value = 0
 
-        self.assertTrue(self.watcher.match('lt', '-0.1'))
+        mock_trend.return_value = -0.28
+        trend = self.watcher.match('lt', '-0.1')
+        self.assertEqual(trend, -0.28)
 
         mock_trend.return_value = 0.3
-
-        self.assertTrue(self.watcher.match('gt', '0.1'))
+        trend = self.watcher.match('gt', '0.1')
+        self.assertEqual(trend, 0.3)

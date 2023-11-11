@@ -30,7 +30,7 @@ class CbxWatcher:
             trend = self.crawler.get_trend()
             time.sleep(10)
 
-        return True
+        return trend
 
     def _wait_less_value(self, trend, target):
         """Scrape stock price until it is less, then the number."""
@@ -39,7 +39,7 @@ class CbxWatcher:
             trend = self.crawler.get_trend()
             time.sleep(10)
 
-        return True
+        return trend
 
     @staticmethod
     def _valid_inputs(cond: str, value: str | int | float):
