@@ -14,7 +14,7 @@ Trend value: float number
 
 ### CLI command example
 ```
-python main.py gt -0.1
+python main.py lt -0.1
 ```
-Here the application will send a notification email when the trend reaches up 
+Here the application will send a notification email when the trend reaches down 
 to the value -0.1
