@@ -6,9 +6,7 @@
 ## Usage
 Takes two arguments: trend direction and expected trend value
 
-Trend direction:
-gt - greater then 
-lt - less then.
+Trend direction: gt (greater, then) or lt (less, then).
 
 Trend value: float number
 
