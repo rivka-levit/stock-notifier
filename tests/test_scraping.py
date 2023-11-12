@@ -4,8 +4,8 @@ Tests for Chrome client.
 
 import unittest
 
-from clients import ChromeClient
-from crawlers import CbxCrawler
+from utils.clients import ChromeClient
+from utils.crawlers import CbxCrawler
 
 
 class ScrapingTests(unittest.TestCase):

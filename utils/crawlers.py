@@ -3,7 +3,7 @@ Crawlers to scrape data from sites.
 """
 
 from selenium.webdriver.common.by import By
-from clients import ChromeClient
+from utils.clients import ChromeClient
 import time
 
 

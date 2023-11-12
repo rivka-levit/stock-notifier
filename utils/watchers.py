@@ -3,7 +3,7 @@ Watch for the signal from stock exchange.
 """
 
 import time
-from crawlers import CbxCrawler
+from utils.crawlers import CbxCrawler
 
 
 class CbxWatcher:

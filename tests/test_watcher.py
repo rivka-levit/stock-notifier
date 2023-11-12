@@ -4,7 +4,7 @@ Tests for watchers.
 from unittest import TestCase
 from unittest.mock import patch
 
-from watchers import CbxWatcher
+from utils.watchers import CbxWatcher
 
 
 class CbxWatcherTests(TestCase):
@@ -14,7 +14,7 @@ class CbxWatcherTests(TestCase):
         self.watcher = CbxWatcher()
 
     @patch('time.sleep')
-    @patch('crawlers.CbxCrawler.get_trend')
+    @patch('utils.crawlers.CbxCrawler.get_trend')
     def test_watcher_check_trend(self, mock_trend, patched_sleep):
         """Test the watcher scrapes the trend and notify when it matches."""
 

@@ -4,8 +4,8 @@ Tests for notifiers.
 from unittest import TestCase
 from unittest.mock import patch
 
-from notifiers import CbxNotifier
-from emails import EmailTrendNotification
+from utils.notifiers import CbxNotifier
+from utils.emails import EmailTrendNotification
 
 
 class NotificationTests(TestCase):
@@ -16,7 +16,7 @@ class NotificationTests(TestCase):
         self.mail = EmailTrendNotification()
 
     @patch.object(EmailTrendNotification, 'send')
-    @patch('watchers.CbxWatcher.match')
+    @patch('utils.watchers.CbxWatcher.match')
     def test_notify_when_trend_match(self, patched_trend, mocked_send):
         """Test sending notification when the trend matches the value."""
 
