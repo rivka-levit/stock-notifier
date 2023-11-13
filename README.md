@@ -15,4 +15,4 @@ Trend value: float number
 docker compose run --rm app sh -c "python main.py lt -0.1"
 ```
 Here the application will send a notification email when the trend reaches down 
-to the value -0.1
+to the value -0.1 or less.
