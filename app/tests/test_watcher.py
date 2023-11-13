@@ -4,7 +4,7 @@ Tests for watchers.
 from unittest import TestCase
 from unittest.mock import patch
 
-from app.utils.watchers import CbxWatcher
+from utils.watchers import CbxWatcher
 
 
 class CbxWatcherTests(TestCase):

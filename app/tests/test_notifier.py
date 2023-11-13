@@ -4,8 +4,8 @@ Tests for notifiers.
 from unittest import TestCase
 from unittest.mock import patch
 
-from app.utils.notifiers import CbxNotifier
-from app.utils.emails import EmailTrendNotification
+from utils.notifiers import CbxNotifier
+from utils.emails import EmailTrendNotification
 
 
 class NotificationTests(TestCase):
