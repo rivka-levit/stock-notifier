@@ -4,22 +4,25 @@ Tests for Chrome client.
 
 import unittest
 
-from app.utils.clients import ChromeClient
-from app.utils.crawlers import CbxCrawler
+from utils.clients import RemoteChromeDriver
+from utils.crawlers import CbxCrawler
 
 
 class ScrapingTests(unittest.TestCase):
     """Tests for Chrome driver."""
 
     def setUp(self):
-        self.client = ChromeClient()
+        self.client = RemoteChromeDriver()
 
     def test_chrome_driver_works(self):
         """Test chrome driver access the page and get the response."""
 
-        self.client.get('https://zse.hr/en/indeks-366/365?isin=HRZB00ICBEX6')
+        driver = self.client.get_driver()
+        driver.get('https://zse.hr/en/indeks-366/365?isin=HRZB00ICBEX6')
+        title = driver.title
+        driver.quit()
 
-        self.assertIn("CROBEX", self.client.title)
+        self.assertIn("CROBEX", title)
 
     def test_crawler_scrapes_trend(self):
         """Test the crawler returns float value of index change."""
