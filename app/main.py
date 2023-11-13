@@ -1,5 +1,5 @@
 import sys
-from utils.notifiers import CbxNotifier
+from app.utils.notifiers import CbxNotifier
 
 try:
     direction, value = sys.argv[1], sys.argv[2]

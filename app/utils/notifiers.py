@@ -1,8 +1,8 @@
 """
 Notifiers to wait for watcher matches and send notification.
 """
-from utils.watchers import CbxWatcher
-from utils.emails import EmailTrendNotification
+from app.utils.watchers import CbxWatcher
+from app.utils.emails import EmailTrendNotification
 
 
 class CbxNotifier:
